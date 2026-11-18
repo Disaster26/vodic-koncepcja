@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Wynajem zestawów tour guide w Krakowie - VODIC Tour Guide System</title>
+<meta name="description" content="Wynajem zestawów słuchawkowych tour guide Okayo dla przewodników, pilotów, biur podróży i konferencji. Dowóz pod wskazany adres w Krakowie, wysyłka kurierem w całej Polsce.">
+<meta name="theme-color" content="#1C77AE">
+<link rel="icon" href="img/favicon.png" type="image/png">
+<link rel="preload" as="font" type="font/woff2" href="fonts/nunito.woff2" crossorigin>
+<link rel="preload" as="image" href="img/hero-m-480.webp" imagesrcset="img/hero-m-480.webp 480w, img/hero-m-760.webp 760w" imagesizes="100vw" media="(max-width:760px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/hero-1600.webp" imagesrcset="img/hero-1024.webp 1024w, img/hero-1600.webp 1600w, img/hero-2000.webp 1912w" imagesizes="100vw" media="(min-width:761px)" fetchpriority="high">
+<style>
+@font-face{font-family:Nunito;font-weight:200 1000;font-display:swap;src:url(fonts/nunito.woff2) format("woff2")}
+:root{
+  --niebieski:#1C77AE;--niebieski-c:#155E8A;--blekit:#4AA7D6;--jasny:#70C9EE;--morski:#6EC3C1;
+  --grafit:#1D1D1B;--tekst:#22262A;--szary:#5A626A;--tlo2:#EEF3F6;--ciemne:#1A1E21;--stopka:#121517;--linia:#D9E1E7;
+  --grad:linear-gradient(90deg,#3E9ECE 0%,#70C9EE 52%,#6EC3C1 100%);
+  --w:min(92vw,1680px);--hdr:72px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:var(--hdr)}
+body{margin:0;font-family:Nunito,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--tekst);background:#fff;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--niebieski)}
+h1,h2,h3{font-weight:800;line-height:1.15;color:var(--grafit);margin:0;letter-spacing:-.01em}
+h2{font-size:clamp(30px,3.2vw,52px)}
+h3{font-size:clamp(20px,1.5vw,24px)}
+p{margin:0}
+.wrap{width:var(--w);margin:0 auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;min-height:54px;padding:0 30px;border-radius:14px;background:var(--niebieski);color:#fff;font-weight:800;font-size:18px;text-decoration:none;border:0;cursor:pointer;font-family:inherit;transition:background .2s,transform .2s}
+.btn:hover{background:var(--niebieski-c)}
+.btn:active{transform:translateY(1px)}
+.btn:focus-visible,a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--jasny);outline-offset:3px}
+
+/* naglowek */
+.hdr{position:sticky;top:0;z-index:50;background:#fff;height:var(--hdr);border-bottom:1px solid transparent;transition:border-color .2s,box-shadow .2s}
+.hdr.cien{border-color:var(--linia);box-shadow:0 6px 24px rgba(20,40,60,.06)}
+.hdr .wrap{height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo{display:block;flex:none}
+.logo img{height:50px;width:auto}
+.nav{display:flex;align-items:center;gap:clamp(18px,2vw,36px)}
+.nav a{color:var(--grafit);text-decoration:none;font-weight:700;font-size:17px;padding:6px 0;position:relative}
+.nav a.akt::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:3px;border-radius:3px;background:var(--grad)}
+.nav a:hover{color:var(--niebieski)}
+.tel{display:inline-flex;align-items:center;gap:10px;font-weight:800;font-size:18px;color:var(--grafit);text-decoration:none;padding:10px 16px;border:2px solid var(--linia);border-radius:14px;white-space:nowrap}
+.tel:hover{border-color:var(--blekit)}
+.tel svg{width:20px;height:20px;flex:none}
+.burger{display:none;width:48px;height:48px;border:2px solid var(--linia);border-radius:12px;background:#fff;cursor:pointer;padding:0;align-items:center;justify-content:center}
+.burger span{display:block;width:20px;height:2px;background:var(--grafit);position:relative;border-radius:2px}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0;width:20px;height:2px;background:var(--grafit);border-radius:2px;transition:transform .2s}
+.burger span::before{top:-6px}.burger span::after{top:6px}
+.menu-otw .burger span{background:transparent}
+.menu-otw .burger span::before{transform:translateY(6px) rotate(45deg)}
+.menu-otw .burger span::after{transform:translateY(-6px) rotate(-45deg)}
+
+/* hero */
+.hero{position:relative;min-height:calc(100svh - var(--hdr));display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:#3a4a58}
+.hero picture,.hero picture img{position:absolute;inset:0;width:100%;height:100%}
+.hero picture img{object-fit:cover;object-position:50% 12%}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(9,22,32,.80) 0%,rgba(9,22,32,.55) 38%,rgba(9,22,32,0) 66%),linear-gradient(0deg,rgba(9,22,32,.55) 0%,rgba(9,22,32,0) 45%)}
+.hero-in{position:relative;z-index:2;width:var(--w);margin:0 auto;padding:clamp(48px,8vh,110px) 0 clamp(48px,9vh,120px)}
+.hero h1{color:#fff;font-size:clamp(36px,4.3vw,98px);max-width:15em;line-height:1.08;letter-spacing:-.015em;text-wrap:balance}
+.hero h1 .fraza{display:block;font-size:.56em;font-weight:700;letter-spacing:0;margin-bottom:.35em;color:#DDF2FB}
+.hero .lead{margin-top:22px;font-size:clamp(18px,1.15vw,27px);max-width:36em;color:#EEF6FA;line-height:1.55}
+.hero .akcje{margin-top:32px;display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.hero .btn{min-height:58px;padding:0 34px;font-size:19px}
+.hero .gdzie{font-weight:700;color:#DDF2FB;font-size:17px}
+.palak-hero{display:block;width:clamp(120px,11vw,190px);height:auto;margin-bottom:22px}
+
+/* sekcje */
+.sek{padding:clamp(72px,9vw,140px) 0}
+.sek-szara{background:var(--tlo2)}
+.wstep{max-width:44em;margin-top:18px;color:var(--szary);font-size:clamp(17px,1.2vw,20px)}
+
+/* zestaw */
+.zestaw{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(40px,6vw,120px);align-items:center;margin-top:clamp(40px,5vw,72px)}
+.sluchawki{position:relative}
+.sluchawki svg.palak{display:block;width:100%;height:auto}
+.urzadzenia{display:grid;grid-template-columns:1fr 1fr;margin-top:-4%}
+.urz{text-align:center;padding:0 4%}
+.urz img{width:min(88%,360px);height:auto;margin:0 auto;aspect-ratio:1/1;object-fit:contain}
+.urz b{display:block;margin-top:14px;font-size:clamp(18px,1.4vw,22px);color:var(--grafit)}
+.urz span{display:block;color:var(--szary);font-size:16px}
+.parametry{margin:28px 0 0;padding:0;list-style:none;border-top:1px solid var(--linia)}
+.parametry li{display:flex;justify-content:space-between;gap:20px;padding:16px 2px;border-bottom:1px solid var(--linia);font-size:clamp(17px,1.25vw,20px)}
+.parametry li b{color:var(--grafit);font-weight:800;text-align:right}
+.zestaw .opis{color:var(--szary);margin-top:22px}
+.zestaw .btn{margin-top:32px}
+
+/* dla kogo */
+.dlakogo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,5vw,96px);align-items:stretch}
+.foto-spad{position:relative;border-radius:22px;overflow:hidden;min-height:420px;cursor:zoom-in;background:#cfd8de}
+.foto-spad img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.grupy{margin-top:34px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 clamp(28px,3vw,56px)}
+.grupa{padding:24px 0 26px;border-top:1px solid #CBD6DE}
+.grupa h3{display:flex;align-items:center;gap:12px}
+.grupa h3 svg{width:30px;height:18px;flex:none}
+.grupa p{margin-top:10px;color:var(--szary);font-size:17px}
+
+/* dowoz - ciemna */
+.dowoz{background:var(--ciemne);color:#E6EDF1;position:relative;overflow:hidden}
+.dowoz h2{color:#fff;max-width:17em}
+.dowoz .wrap{position:relative;z-index:1}
+.dowoz-kol{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,4vw,80px);margin-top:clamp(36px,4vw,60px);max-width:1180px}
+.dowoz-kol div{padding-top:22px;border-top:3px solid;border-image:var(--grad) 1}
+.dowoz-kol h3{color:#fff}
+.dowoz-kol p{margin-top:10px;color:#C2CDD4}
+.dowoz .gwar{margin-top:clamp(36px,4vw,56px);font-size:clamp(18px,1.4vw,22px);color:#fff;max-width:40em}
+.panorama{position:absolute;right:max(4vw,calc((100vw - 1680px)/2));bottom:0;width:clamp(170px,19vw,330px);aspect-ratio:300/476;background:var(--grad);-webkit-mask:url(img/panorama.webp) center bottom/contain no-repeat;mask:url(img/panorama.webp) center bottom/contain no-repeat;opacity:.95}
+
+/* o nas */
+.onas{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(40px,6vw,120px);align-items:center}
+.onas .foto-spad{min-height:0;aspect-ratio:4/5}
+.onas .foto-spad img{object-position:50% 30%}
+.onas p.tekst{margin-top:22px;font-size:clamp(17px,1.25vw,20px);color:var(--szary);max-width:38em}
+.cytat{margin:clamp(30px,3vw,48px) 0 0;padding:0;font-size:clamp(24px,2.3vw,38px);font-weight:800;line-height:1.25;color:var(--grafit);max-width:20em}
+.cytat svg{display:block;width:clamp(90px,7vw,120px);height:auto;margin-bottom:16px}
+.cytat cite{display:block;margin-top:14px;font-style:normal;font-size:17px;font-weight:700;color:var(--szary)}
+
+/* kontakt */
+.kontakt{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(40px,6vw,120px);align-items:start}
+.kontakt .duzy-tel{display:inline-block;margin-top:26px;font-size:clamp(32px,3.2vw,52px);font-weight:900;color:var(--grafit);text-decoration:none;letter-spacing:-.01em}
+.kontakt .duzy-tel:hover{color:var(--niebieski)}
+.kontakt .mail{display:block;margin-top:6px;font-size:20px;font-weight:700}
+.kroki{margin:34px 0 0;padding:0;list-style:none;counter-reset:k}
+.kroki li{counter-increment:k;padding:14px 0 14px 44px;position:relative;border-top:1px solid #CBD6DE;color:var(--tekst)}
+.kroki li::before{content:counter(k);position:absolute;left:0;top:14px;font-weight:900;color:var(--niebieski);font-size:18px}
+form.zapyt{background:#fff;border-radius:22px;padding:clamp(24px,3vw,44px);box-shadow:0 20px 50px rgba(20,50,70,.08)}
+.pola{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+.pole{display:flex;flex-direction:column;gap:6px}
+.pole.cale{grid-column:1/-1}
+.pole label{font-weight:700;font-size:15px;color:var(--grafit)}
+.pole input,.pole textarea{font:inherit;font-size:17px;padding:13px 14px;border:2px solid var(--linia);border-radius:12px;background:#fff;color:var(--tekst);min-width:0}
+.pole input:focus,.pole textarea:focus{border-color:var(--blekit);outline:none}
+.pole textarea{min-height:120px;resize:vertical}
+form.zapyt .btn{margin-top:20px;width:100%}
+.uwaga{margin-top:12px;font-size:14px;color:var(--szary);text-align:center}
+.wyslano{display:none;margin-top:14px;padding:14px;border-radius:12px;background:#E3F3FA;color:var(--grafit);font-weight:700;text-align:center}
+
+/* stopka */
+.stopka{background:var(--stopka);color:#B9C4CB;padding:clamp(56px,6vw,88px) 0 28px;font-size:16px}
+.stopka-g{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(2,minmax(0,1fr));gap:40px}
+.stopka img{height:46px;width:auto}
+.stopka p{margin-top:16px;max-width:30em}
+.stopka h3{color:#fff;font-size:17px;margin-bottom:12px}
+.stopka a{color:#E6EDF1;text-decoration:none}
+.stopka a:hover{color:var(--jasny)}
+.stopka ul{list-style:none;margin:0;padding:0}
+.stopka li{padding:3px 0}
+.stopka-d{margin-top:48px;padding-top:22px;border-top:1px solid #2A3034;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;font-size:15px;line-height:1.4}
+
+.wylinka-badge{display:inline-flex;align-items:center;gap:.4em;color:inherit;text-decoration:none;font-size:.875em;line-height:1;opacity:.85}
+.wylinka-badge:hover,.wylinka-badge:focus-visible{opacity:1}
+.wylinka-badge:focus-visible{outline:2px solid currentColor;outline-offset:3px;border-radius:2px}
+.wylinka-badge svg{width:18px;height:18px;flex:none;overflow:visible}
+.wylinka-badge b{font-weight:600}
+.wylinka-badge .wy-old{opacity:.45;transform-origin:40px 30px;transition:transform .32s cubic-bezier(.3,.7,.4,1),opacity .32s ease-out}
+.wylinka-badge .wy-pod{opacity:0;transition:opacity .2s ease-out .08s}
+.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:translate(9px,7px) rotate(9deg);opacity:0}
+.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:1}
+@media (prefers-reduced-motion:reduce){.wylinka-badge .wy-old,.wylinka-badge .wy-pod{transition:none}.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:none;opacity:.45}.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:0}}
+
+
+.stopka .wylinka-badge{font-size:1em;line-height:1.4}
+.stopka .wylinka-badge svg{width:1.15em;height:1.15em}
+
+/* pasek mobilny */
+.mob{display:none}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(10,14,17,.92);display:none;align-items:center;justify-content:center;padding:4vw}
+.lb.otw{display:flex}
+.lb img{max-width:100%;max-height:86vh;width:auto;height:auto;border-radius:10px}
+.lb button{position:absolute;top:16px;right:16px;width:52px;height:52px;border-radius:14px;border:0;background:#fff;color:var(--grafit);font-size:28px;line-height:1;cursor:pointer;font-family:inherit}
+.lb figcaption{position:absolute;bottom:18px;left:0;right:0;text-align:center;color:#E6EDF1;font-size:16px}
+
+@media (max-width:1100px){
+  .nav,.hdr .tel{display:none}
+  .burger{display:inline-flex}
+  .menu-otw .nav{display:flex;position:fixed;top:var(--hdr);left:0;right:0;bottom:0;background:#fff;flex-direction:column;align-items:stretch;gap:0;padding:12px 4vw 32px;overflow:auto}
+  .menu-otw .nav a{font-size:22px;padding:18px 0;border-bottom:1px solid var(--linia)}
+  .menu-otw .nav a.akt::after{bottom:14px;right:auto;width:42px}
+  .menu-otw .nav .tel-m{display:flex}
+  .zestaw,.dlakogo,.onas,.kontakt{grid-template-columns:minmax(0,1fr)}
+  .onas .foto-spad{aspect-ratio:16/10}
+}
+.nav .tel-m{display:none;margin-top:22px;justify-content:center;font-size:20px;border-bottom:2px solid var(--linia)!important;padding:14px!important}
+@media (max-width:760px){
+  :root{--w:calc(100vw - 32px);--hdr:64px}
+  body{font-size:16.5px}
+  .logo img{height:38px}
+  .hero{align-items:stretch}
+  .hero picture img{object-position:50% 40%}
+  .hero::before{background:linear-gradient(0deg,rgba(9,22,32,.88) 0%,rgba(9,22,32,.62) 42%,rgba(9,22,32,0) 76%)}
+  .hero-in{display:flex;flex-direction:column;justify-content:flex-end;padding:28px 0 30px}
+  .hero h1{font-size:clamp(28px,8.2vw,40px)}
+  .hero h1 .fraza{font-size:.6em}
+  .hero .lead{margin-top:14px;font-size:17px}
+  .hero .akcje{margin-top:24px}
+  .hero .btn{width:100%}
+  .hero .gdzie{display:none}
+  .palak-hero{width:96px;margin-bottom:14px}
+  .grupy{grid-template-columns:minmax(0,1fr)}
+  .foto-spad{min-height:0;aspect-ratio:4/3}
+  .urz span{font-size:14.5px}
+  .dowoz-kol{grid-template-columns:minmax(0,1fr)}
+  .dowoz{padding-bottom:230px}
+  .panorama{right:16px;width:130px}
+  .pola{grid-template-columns:minmax(0,1fr)}
+  .stopka-g{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px 20px}
+  .stopka-g>div:first-child{grid-column:1/-1}
+  .mob{display:grid;grid-template-columns:1fr 1.4fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:40;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:#fff;border-top:1px solid var(--linia);transform:translateY(110%);transition:transform .25s}
+  .mob.widac{transform:none}
+  .mob a{min-height:50px;font-size:17px}
+  .mob .tel{justify-content:center}
+  .stopka{padding-bottom:96px}
+}
+@media (max-height:700px) and (max-width:760px){
+  .hero h1{font-size:clamp(26px,7.4vw,34px)}
+  .hero .lead{font-size:16px;line-height:1.5}
+  .palak-hero{width:80px;margin-bottom:10px}
+}
+@media (min-width:1900px){
+  :root{--hdr:84px}
+  .logo img{height:58px}
+  .nav a{font-size:19px}
+  .tel{font-size:20px}
+  body{font-size:18.5px}
+  .hero .btn{min-height:66px;font-size:21px;padding:0 40px}
+  .palak-hero{width:200px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#3E9ECE"/><stop offset=".52" stop-color="#70C9EE"/><stop offset="1" stop-color="#6EC3C1"/></linearGradient>
+  </defs>
+</svg>
+
+<header class="hdr" id="gora">
+  <div class="wrap">
+    <a class="logo" href="#gora" aria-label="VODIC Tour Guide System - strona główna"><img src="img/logo.webp" width="560" height="167" alt="VODIC Tour Guide System"></a>
+    <nav class="nav" id="nav" aria-label="Menu główne">
+      <a href="#gora" class="akt">Strona główna</a>
+      <a href="#zestaw">Zestaw Okayo</a>
+      <a href="#dla-kogo">Dla kogo</a>
+      <a href="#dowoz">Dowóz i wysyłka</a>
+      <a href="#o-nas">O nas</a>
+      <a href="#kontakt">Kontakt</a>
+      <a class="tel tel-m" href="tel:+48782753773">Zadzwoń: 782 753 773</a>
+    </nav>
+    <a class="tel" href="tel:+48782753773"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 2.5h3l1.4 4-2 1.3a10 10 0 0 0 5.8 5.8l1.3-2 4 1.4v3c0 1-.8 1.8-1.8 1.8C9 17.8 2.2 11 2.2 4.3c0-1 .8-1.8 1.8-1.8z" fill="none" stroke="#1C77AE" stroke-width="1.8" stroke-linejoin="round"/></svg>782 753 773</a>
+    <button class="burger" id="burger" aria-label="Otwórz menu" aria-expanded="false" aria-controls="nav"><span></span></button>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="hero">
+  <picture>
+    <source media="(max-width:760px)" srcset="img/hero-m-480.webp 480w, img/hero-m-760.webp 760w" sizes="100vw" width="760" height="1304">
+    <img src="img/hero-1600.webp" srcset="img/hero-1024.webp 1024w, img/hero-1600.webp 1600w, img/hero-2000.webp 1912w" sizes="100vw" width="1912" height="1373" alt="Rynek Główny w Krakowie z Sukiennicami i Wieżą Ratuszową" fetchpriority="high">
+  </picture>
+  <div class="hero-in">
+    <svg class="palak-hero" viewBox="0 0 200 110" aria-hidden="true"><path d="M22 96 A78 78 0 0 1 178 96" fill="none" stroke="url(#g)" stroke-width="7" stroke-linecap="round"/><rect x="6" y="70" width="26" height="40" rx="13" fill="#3E9ECE"/><rect x="168" y="70" width="26" height="40" rx="13" fill="#6EC3C1"/></svg>
+    <h1><span class="fraza">Wynajem zestawów tour guide w Krakowie</span>Cała grupa słyszy przewodnika - także w tłumie na Rynku</h1>
+    <p class="lead">Zestawy słuchawkowe dla przewodników, pilotów, biur podróży i konferencji. Dowozimy pod wskazany adres w Krakowie albo wysyłamy kurierem w całej Polsce.</p>
+    <div class="akcje">
+      <a class="btn" href="#kontakt">Zapytaj o wolny termin</a>
+      <span class="gdzie">Kraków i cała Polska</span>
+    </div>
+  </div>
+</section>
+
+<section class="sek" id="zestaw">
+  <div class="wrap">
+    <h2>Zestaw Okayo WT-300</h2>
+    <p class="wstep">Tour Guide System to bezprzewodowy zestaw do oprowadzania większych grup: przewodnik mówi do mikrofonu, a uczestnicy słuchają go w słuchawkach. Sprawdza się też przy tłumaczeniach symultanicznych na konferencjach.</p>
+    <div class="zestaw">
+      <div class="sluchawki">
+        <svg class="palak" viewBox="0 0 800 250" aria-hidden="true"><path d="M200 236 A200 200 0 0 1 600 236" fill="none" stroke="url(#g)" stroke-width="14" stroke-linecap="round"/><rect x="170" y="176" width="60" height="74" rx="30" fill="#3E9ECE"/><rect x="570" y="176" width="60" height="74" rx="30" fill="#6EC3C1"/></svg>
+        <div class="urzadzenia">
+          <div class="urz"><img src="img/nadajnik.webp" width="355" height="380" alt="Nadajnik Okayo z mikrofonem krawatowym" loading="lazy" decoding="async"><b>Nadajnik z mikrofonem</b><span>dla przewodnika lub pilota</span></div>
+          <div class="urz"><img src="img/odbiornik.webp" width="300" height="300" alt="Odbiornik Okayo ze słuchawką na ucho" loading="lazy" decoding="async"><b>Odbiornik ze słuchawką</b><span>dla każdego uczestnika</span></div>
+        </div>
+      </div>
+      <div>
+        <h3>Co potrafi WT-300</h3>
+        <ul class="parametry">
+          <li>Zasięg <b>do 150 m</b></li>
+          <li>Kanały <b>40</b></li>
+          <li>Waga <b>tylko 110 g</b></li>
+          <li>Czas pracy <b>do 60 godzin</b></li>
+          <li>Obsługa <b>prosta</b></li>
+        </ul>
+        <p class="opis">Lekki zestaw nie przeszkadza w całodniowym zwiedzaniu, a 40 kanałów pozwala kilku grupom korzystać z zestawów obok siebie, każdej na swoim kanale.</p>
+        <a class="btn" href="#kontakt">Zamów zestawy</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sek sek-szara" id="dla-kogo">
+  <div class="wrap dlakogo">
+    <figure class="foto-spad" style="margin:0" data-lb="img/sukiennice-1100.webp" data-opis="Sukiennice na Rynku Głównym w Krakowie" tabindex="0" role="button" aria-label="Powiększ zdjęcie Sukiennic">
+      <img src="img/sukiennice-700.webp" srcset="img/sukiennice-700.webp 700w, img/sukiennice-1100.webp 1100w" sizes="(max-width:1100px) 92vw, 46vw" width="1100" height="855" alt="Sukiennice i turyści na Rynku Głównym w Krakowie" loading="lazy" decoding="async">
+    </figure>
+    <div>
+      <h2>Dla kogo są nasze zestawy</h2>
+      <p class="wstep">Wynajmujemy zestawy każdemu, kto prowadzi grupę i chce, żeby wszyscy słyszeli go wyraźnie.</p>
+      <div class="grupy">
+        <div class="grupa"><h3><svg viewBox="0 0 30 18" aria-hidden="true"><path d="M4 16 A11 11 0 0 1 26 16" fill="none" stroke="url(#g)" stroke-width="3.4" stroke-linecap="round"/></svg>Przewodnicy miejscy</h3><p>Opowieść słychać w gwarze Starego Miasta i w miejscach, gdzie trzeba mówić cicho.</p></div>
+        <div class="grupa"><h3><svg viewBox="0 0 30 18" aria-hidden="true"><path d="M4 16 A11 11 0 0 1 26 16" fill="none" stroke="url(#g)" stroke-width="3.4" stroke-linecap="round"/></svg>Piloci wycieczek</h3><p>Komunikaty dla całej grupy bez podnoszenia głosu, także gdy uczestnicy idą rozciągnięci.</p></div>
+        <div class="grupa"><h3><svg viewBox="0 0 30 18" aria-hidden="true"><path d="M4 16 A11 11 0 0 1 26 16" fill="none" stroke="url(#g)" stroke-width="3.4" stroke-linecap="round"/></svg>Biura podróży</h3><p>Zestawy dla przewodników i pilotów obsługujących Państwa grupy, z dowozem pod wskazany adres.</p></div>
+        <div class="grupa"><h3><svg viewBox="0 0 30 18" aria-hidden="true"><path d="M4 16 A11 11 0 0 1 26 16" fill="none" stroke="url(#g)" stroke-width="3.4" stroke-linecap="round"/></svg>Konferencje</h3><p>Tłumaczenia symultaniczne na konferencjach i wydarzeniach różnego rodzaju.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sek dowoz" id="dowoz">
+  <div class="wrap">
+    <h2>Zestawy przyjeżdżają do Państwa, nie odwrotnie</h2>
+    <div class="dowoz-kol">
+      <div><h3>Kraków</h3><p>Dowozimy zestawy pod wskazany adres w Krakowie.</p></div>
+      <div><h3>Cała Polska</h3><p>Poza Krakowem wysyłamy zestawy przesyłką kurierską na terenie całego kraju.</p></div>
+    </div>
+    <p class="gwar">Gwarantujemy zaangażowanie naszych pracowników i pomoc na każdym etapie współpracy.</p>
+  </div>
+  <div class="panorama" aria-hidden="true"></div>
+</section>
+
+<section class="sek" id="o-nas">
+  <div class="wrap onas">
+    <figure class="foto-spad" style="margin:0" data-lb="img/wieza-600.webp" data-opis="Wieża Ratuszowa na Rynku Głównym w Krakowie" tabindex="0" role="button" aria-label="Powiększ zdjęcie Wieży Ratuszowej">
+      <img src="img/wieza-600.webp" width="600" height="1560" sizes="(max-width:1100px) 92vw, 36vw" alt="Wieża Ratuszowa na Rynku Głównym w Krakowie" loading="lazy" decoding="async">
+    </figure>
+    <div>
+      <h2>Przewodnicy i piloci, którzy znają potrzeby grupy</h2>
+      <p class="tekst">W branży turystycznej pracujemy od 10 lat. W naszym zespole są zarówno przewodnicy, jak i piloci wycieczek, dlatego jesteśmy przygotowani także na sytuacje awaryjne.</p>
+      <blockquote class="cytat">
+        <svg viewBox="0 0 200 110" aria-hidden="true"><path d="M22 96 A78 78 0 0 1 178 96" fill="none" stroke="url(#g)" stroke-width="8" stroke-linecap="round"/><rect x="6" y="70" width="26" height="40" rx="13" fill="#3E9ECE"/><rect x="168" y="70" width="26" height="40" rx="13" fill="#6EC3C1"/></svg>
+        Wiemy, że w turystyce nie zdarzają się dwie takie same grupy.
+        <cite>Zespół VODIC</cite>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="sek sek-szara" id="kontakt">
+  <div class="wrap kontakt">
+    <div>
+      <h2>Zapytaj o wolny termin</h2>
+      <a class="duzy-tel" href="tel:+48782753773">782 753 773</a>
+      <a class="mail" href="mailto:biuro@vodic.pl">biuro@vodic.pl</a>
+      <ol class="kroki">
+        <li>Podaj termin, liczbę uczestników i miejsce.</li>
+        <li>Ustalamy dowóz w Krakowie albo wysyłkę kurierem.</li>
+        <li>Zestawy są gotowe na start wycieczki lub konferencji.</li>
+      </ol>
+    </div>
+    <form class="zapyt" id="form" novalidate>
+      <div class="pola">
+        <div class="pole"><label for="f-imie">Imię i nazwisko</label><input id="f-imie" name="imie" autocomplete="name"></div>
+        <div class="pole"><label for="f-kontakt">Telefon lub e-mail</label><input id="f-kontakt" name="kontakt" autocomplete="email"></div>
+        <div class="pole"><label for="f-termin">Termin</label><input id="f-termin" name="termin" placeholder="np. 12-14 maja"></div>
+        <div class="pole"><label for="f-osoby">Liczba uczestników</label><input id="f-osoby" name="osoby" inputmode="numeric" placeholder="np. 35"></div>
+        <div class="pole cale"><label for="f-wiad">Wiadomość</label><textarea id="f-wiad" name="wiadomosc" placeholder="Miejsce odbioru, rodzaj wydarzenia, pytania"></textarea></div>
+      </div>
+      <button class="btn" type="submit">Wyślij zapytanie</button>
+      <p class="wyslano" id="wyslano" role="status">To podgląd strony - formularz nie wysyła jeszcze wiadomości.</p>
+      <p class="uwaga">Formularz pokazowy, w podglądzie nie wysyła wiadomości.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="stopka">
+  <div class="wrap">
+    <div class="stopka-g">
+      <div><img src="img/logo-biale.webp" width="560" height="167" alt="VODIC Tour Guide System" loading="lazy" decoding="async"><p>Wynajem zestawów słuchawkowych tour guide dla przewodników, pilotów, biur podróży i konferencji. Kraków i cała Polska.</p></div>
+      <div><h3>Kontakt</h3><ul><li><a href="tel:+48782753773">782 753 773</a></li><li><a href="mailto:biuro@vodic.pl">biuro@vodic.pl</a></li></ul></div>
+      <div><h3>Strona</h3><ul><li><a href="#zestaw">Zestaw Okayo</a></li><li><a href="#dla-kogo">Dla kogo</a></li><li><a href="#dowoz">Dowóz i wysyłka</a></li><li><a href="#o-nas">O nas</a></li></ul></div>
+    </div>
+    <div class="stopka-d"><span>© 2026 VODIC Tour Guide System</span><a class="wylinka-badge" href="https://wylinka.pl/?utm_source=vodic.pl&amp;utm_medium=stopka&amp;utm_campaign=wykonanie" rel="noopener" title="Strona wykonana przez Wylinka"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false" fill="currentColor"><path d="M9.8 22.8l-1.2-7.9 2.2-3.7 15.5 4.6-.5 1.5-7.2 5.5 4.7 15.6 5-15.6 7 0 4.1 12.7-4.2-.9-2.6 1.8-.8-2.2-5.3 15.6-4.3 0 .4 .2-2.1 2.8-1.3-1.1 1.1-1.4-3.1 .2-.1-1.7 2.2-.1-5.7-16.5-4.8 .6-.8 3.1 0 .5-.3 .5 .8 2.2-1.6 .5-.4-1.3-.8 1.6-1.5-.8 .8-1.6-1.4 .6-.6-1.6 2.3-.8 .2-.4 1.3-4.8 5.9-.8-2.4-6.9zM15.2 13.7l-.1-.4-.4 .8-.1 .8 .1 1 .1 .4 .3 .7 .3-.9 .1-.7 0-.8z"/><path class="wy-pod" d="M37.1 49.8l-4.5-13.3 2.6-1.8 4.2 .9 .9 2.8 3-9.7 0-.5 .1-.8 3.2-8.4 .5-1 .6-1 .9-1.1 1.3-1 1.1-.7 1.4-.5 1.4-.3 .7 0 .9 0 1.2 .3 1.4 .6 .8 .5 .7 .7 .6 .7 .5 .9 .3 .9 .1 .9 0 .8-.2 .9-.5 .9-.5 .6-.7 .5-.7 .3-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.6-.1-.6-.3-.7-.4-.5-.4-.4-.5-.3-.6-.3-.7 0-.7 .1-.6 .1-.5 .4-.5 .5-.3 .5-.2 .7-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1-2.1-2.8 .4-.2z"/><path class="wy-old" d="M40.8 50l.4-.2-4.1 0-4.2-12.5 2.5-1.7 4.3 .9 .6 1.9 .6-1.6 0-.3 2.4-7.8 0-.5 .1-.8 3.2-8.4 .4-.8 .6-.9 .9-1.2 .9-.9 1.3-.8 1.4-.6 1.2-.3 1.4-.1 1.3 .1 .6 .2 .8 .3 1.1 .6 .9 .7 .7 .9 .5 .9 .3 .9 .1 1.1-.1 .9-.3 .9-.4 .7-.6 .7-.6 .4-.6 .2-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.5-.1-.6-.2-.6-.3-.5-.4-.5-.5-.3-.6-.3-.7-.1-.6 0-.6 .1-.6 .3-.6 .5-.3 .4-.2 .5-.1 .5-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1zM49.6 17.1l.6 1.7-1.5 1.9 .4 .4 1.8-2.1-.7-2.1zM48.1 28.3l.5 1.8-1.7 1.8 .4 .4 1.9-2-.6-2.2zM37.9 41.7l1.7-1.5-.4-.4-1.7 1.4zM42.6 38.7l-1.5 2.8 1.1 2-1.3 2.6 .5 .2 1.5-2.8-1.1-2 1.4-2.5z"/></svg><span>wykonanie: <b>Wylinka</b></span></a>
+</div>
+  </div>
+</footer>
+
+<div class="mob" id="mob"><a class="tel" href="tel:+48782753773">Zadzwoń</a><a class="btn" href="#kontakt">Zapytaj o termin</a></div>
+<figure class="lb" id="lb" aria-hidden="true"><button type="button" aria-label="Zamknij">×</button><img alt=""><figcaption></figcaption></figure>
+<script src="app.js" defer></script>
+</body>
+</html>
